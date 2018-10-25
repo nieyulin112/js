@@ -7,7 +7,7 @@ const child = {
   uniq: 'data'
 }
 console.log('child', child)
-// 被复用的对象
+// 被复用的对象， call继承
 function Animal(name) {
   this.name = name
   this.getName = function() {
@@ -24,6 +24,7 @@ function Cat(name, age) {
 const cat = new Cat('lily', 2)
 console.log(cat.meow())
 
+// 原型继承
 function Animal(name) {
   this.name = name
 }
@@ -43,7 +44,7 @@ const cats = new Cat('lily', 2)
 console.log(cats.meow())
 
 
-// ES6 class
+// ES6 class， extends
 
 class Animal {
   constructor(name) {
