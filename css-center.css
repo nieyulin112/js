@@ -1,0 +1,4 @@
+一.居中布局
+1.水平居中: display: inline-block + text-algin:center
+2.水平居中: display: table + margin: 0 auto
+3.水平居中: position:absoulte + transform: translateX(-50%)
