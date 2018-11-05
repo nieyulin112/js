@@ -28,8 +28,10 @@ function fib(n) {
 }
 
 // 优化的斐波那契数列
+function add() {
+}
+var start = new Date().getTime()
 var cache = [];
-
 function fibs(n) {
   if (cache[n] !== undefined) {
     return cache[n];
@@ -38,7 +40,10 @@ function fibs(n) {
     cache[n] = 1;
     return 1;
   }
-  cache.push(fib(n - 1) + fib(n - 2));
+  cache.push(fibs(n - 1) + fibs(n - 2));
   return cache[n];
 }
-console.log(fib(5));
+fibs(100)
+console.log('cache', cache)
+var end = new Date().getTime()
+console.log('end - start', end - start);
